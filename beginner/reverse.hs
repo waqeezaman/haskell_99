@@ -1,4 +1,4 @@
-
+-- Given a list returns its reverse
 
 myReverse [] = []
 myReverse (x:xs) = myReverse xs ++ [x]
