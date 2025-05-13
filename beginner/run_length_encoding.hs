@@ -1,6 +1,8 @@
 -- Given a list returns its run length encoding 
 
-encode [] last last_freq = []
+encode [] last 0 = []
+
+encode [] last last_freq = [(last, last_freq)]
 
 encode (x:xs) last last_freq 
     | last_freq == 0 = encode xs x 1  
